@@ -7,8 +7,8 @@ public class NewSubRouteProcessor implements Processor {
 
 	public void process(Exchange exchange) throws Exception {
 		String body = exchange.getIn().getBody(String.class);
-		body = body + "newProcessor";
-		System.out.println("NewSubRouteProcessor Body: "+ body);
+		String tst = body + "newProcessor";
+		System.out.println("NewSubRouteProcessor Body: "+ tst);
 		exchange.getOut().setBody(body);
 	}
 
